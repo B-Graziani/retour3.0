@@ -1,0 +1,10 @@
+<h1>BEST ALL FLATS</h1>
+
+<ul>
+  <% @flats.each do |flat| %>
+  <li>
+    <%= link_to"#{flat.title}", flat %>
+  </li>
+  <% end %>
+</ul>
+<%= link_to "ALL FLATS", flats_path %>

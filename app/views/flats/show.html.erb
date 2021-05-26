@@ -1,0 +1,13 @@
+<h1><%= @flat.title %></h1>
+<h3><%= @flat.address %></h3>
+<p><%= @flat.description %></p>
+<p><%= @flat.stars %></p>
+<%= link_to "MODIFIER", edit_flat_path(@flat) %>
+<br>
+<%= link_to "DELETE", flat_path(@flat), method: :delete, data: { confirm: "are you sure ?"} %>
+<br>
+<% if @flat.stars > 5 || @flat.stars == 5 %>
+  <%= link_to "RETOUR", top_flats_path %>
+<% else %>
+  <%= link_to "RETOUR", flats_path %>
+<% end %>
